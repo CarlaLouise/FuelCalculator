@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/gastos_combustivel"
-        android:layout_width="240dp"
-        android:layout_height="200dp"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
         android:layout_marginStart="16dp"
         android:src="@drawable/bomba_combustivel"
         android:layout_margin="16dp"

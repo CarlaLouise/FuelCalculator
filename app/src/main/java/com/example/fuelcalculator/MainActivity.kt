@@ -3,7 +3,6 @@ package com.example.fuelcalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import com.example.fuelcalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,12 +13,9 @@ class MainActivity : AppCompatActivity() {
         binding =ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val botaoIniciar = binding.btnIniciar
-
-        botaoIniciar.setOnClickListener {
+        binding.btnIniciar.setOnClickListener {
             val intent = Intent (this, ActivityPreco::class.java)
             startActivity(intent)
         }
-
     }
 }

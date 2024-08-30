@@ -3,8 +3,8 @@ package com.example.fuelcalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.fuelcalculator.databinding.ActivityConsumoBinding
 import com.example.fuelcalculator.databinding.ActivityDistanciaBinding
+import com.google.android.material.snackbar.Snackbar
 
 class ActivityDistancia : AppCompatActivity() {
 
@@ -14,13 +14,31 @@ class ActivityDistancia : AppCompatActivity() {
         binding = ActivityDistanciaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val text_distance = binding.tvDistance
-        val botao_distance = binding.btnDistance
+        val tiedistance = binding.tieDistance
+        val btndistance = binding.btnDistance
 
-        botao_distance.setOnClickListener {
-            val intent = Intent (this, ActivityResultado::class.java )
+      btndistance.setOnClickListener {
+            val distanciaStr: String = tiedistance.text.toString()
+
+            if (distanciaStr.isEmpty()){
+                Snackbar
+                    .make(
+                        tiedistance,
+                        "Por favor, insira a distancia.",
+                        Snackbar.LENGTH_LONG
+                    )
+                    .show()
+            } else {
+                val distancia = distanciaStr.toFloat()
+                val preco = intent.getFloatExtra("KEY_PRECO", 0f)
+                val consumo = intent.getFloatExtra("KEY_CONSUMO", 0f)
+                val intent = Intent (this, ActivityResultado::class.java )
+                intent.putExtra("KEY_PRECO", preco)
+                intent.putExtra("KEY_CONSUMO", consumo)
+                intent.putExtra("KEY_DISTANCIA", distancia)
+                startActivity(intent)
+
+            }
         }
-
-
     }
 }
