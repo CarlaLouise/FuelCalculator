@@ -29,7 +29,6 @@ class ActivityResultado : AppCompatActivity() {
             return
         }
 
-
         val custoFinal = (distancia / consumo) * preco
         binding.tvValorFinal.text = "R$ %.2f".format(custoFinal)
 
