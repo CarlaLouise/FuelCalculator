@@ -1,7 +1,8 @@
 # Calculadora de Gasto de Combustível
 
 # Screenshots
-![APRESENTAÇÃO](https://github.com/user-attachments/assets/a0ad48d0-3600-4a91-ad12-8bd49904a05b)
+![Fuel Calculator](https://github.com/user-attachments/assets/679cbe85-658f-4195-8f99-31890fa637bd)
+
 # Descrição
 Este projeto foi desenvolvido como parte de um **desafio de programação**, com o objetivo de criar uma aplicação Android que calcula o valor a ser gasto com combustível com base na distância percorrida. 
 O aplicativo foi construído em **Kotlin** e é ideal para quem deseja planejar viagens e estimar o custo com combustível.
